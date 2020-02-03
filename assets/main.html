@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+     <title>₦AIRA BUDGET APP</title>
+
+     <!-- main css -->
+     <link rel="stylesheet" href="maincss.css">
+     <!-- google fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab&display=swap" rel="stylesheet">
+      <!-- font awesome -->
+     <link rel="stylesheet" href="lib/font/css/all.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>BUDGET APP</h1>
+
+        <div class="floating">
+
+            <!-- Budget input -->
+            <form class="box">
+               <label>Please Enter Your Budget</label>
+               <input class="boxinput" type="number" id= "budget_input_value" name="budget">
+                <button class="btn1 btn hide" id = "budget_button" type="button" name="button">Calculate</button>
+            </form>
+
+            <!-- Spacer Div -->
+            <div id="spacer"></div>
+
+            <!-- Expense input -->
+            <form class="box box2">
+                <label> Please Enter Your Expense </label>
+                <input class="boxinput" type="text" id="expense_det" name="expensedet" value="">
+                <label>Please Enter your expense amount</label>
+                <input class="boxinput" type="number" id="expense_input_value" name="expense">
+                <button id ="expense_button" type="button" name="button"class="btn btn1 hide">Add Expense</button>
+            </form>
+
+            <!-- Reset button -->
+            <button id = 'reset_button' type="button" name="button" class="btn1 btn hide">Reset</button>
+        </div>
+
+        <div class="details">
+
+            <!-- Budget output box -->
+            <div class="output">
+                <p>BUDGET</p>
+                <span class="budget-icon"><i class="fas fa-money-bill-alt"></i></span>
+                <p class="amtone"><span id="currency">₦</span> <span id= "budget">0</span></p>
+            </div>
+
+            <!-- Expenses output box -->
+            <div class="output">
+                <p>EXPENSES</p>
+                <span class="expense-icon"><i class="far fa-credit-card"></i></span>
+                <p class="amttwo"> <span id="currency2">₦</span> <span id= "expense">0</span> </p>
+            </div>
+
+            <!-- Balance output box -->
+            <div class="output">
+                <p>BALANCE</p>
+                <img src="img/naira.svg" class="icon">
+                <p class="amtone" id="balColor"><span id="balColor" class="currency">₦</span> <span id= "balance">0</span></p>
+            </div>
+        </div>
+
+        <div>
+            <!-- Expenses Table -->
+            <table id='expense_table'>
+                <tr>
+                    <th>Expense Title</th>
+                    <th>Expense Value</th>
+                    <th></th>
+                </tr>
+               <!--  <tr>
+                    <td></td>
+                    <td></td>
+                    <td> <button>Delete</button><i class="fas fa-trash"></i></td>
+                </tr> -->
+            </table>
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
